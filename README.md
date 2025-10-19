@@ -131,10 +131,10 @@ authJWTClaimKey: mediamtx_permissions
 Edit the permissions in `main.ts` to control stream access:
 
 ```typescript
-mediamtx_permissions: {
-  read: ['camera_one', 'camera_two', 'stream_xyz'],  // Streams user can view
-  publish: ['user_stream']                            // Streams user can publish to
-}
+mediamtx_permissions: [
+   { action: "read", path: "camera_one" },
+   { action: "publish", path: "camera_one" },
+]
 ```
 
 ## Default Credentials
